@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: registry.local:5000/tekton-argocd/app:16fc615
+      - image: registry.local:5000/tekton-argocd/app:e58b284
         imagePullPolicy: Always
         name: ui
         ports:
