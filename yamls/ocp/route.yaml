@@ -6,19 +6,19 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     # ingress.kubernetes.io/auth-type: forward
     # ingress.kubernetes.io/auth-url: http://traefik-forward-auth.keycloak.svc.cluster.local:4181
     # ingress.kubernetes.io/auth-response-headers: X-Forwarded-User
     # traefik.ingress.kubernetes.io/router.entrypoints: auth-http
     # traefik.ingress.kubernetes.io/router.middlewares: keycloak-traefik-forward-auth@kubernetescrd
 spec:
-  # tls:
-  # - secretName: star-k3s-dedyn-io-tls
-  #     hosts:
-  #       - k3s.dedyn.io
-  #       - whoami.k3s.dedyn.io
-  #       - oauth.k3s.dedyn.io
+  tls:
+  - secretName: star-k3s-dedyn-io-tls
+      hosts:
+        - k3s.dedyn.io
+        - oauth.k3s.dedyn.io
+        - tutorial.k3s.dedyn.io
   rules:
   - host: tutorial.k3s.dedyn.io
     http:
