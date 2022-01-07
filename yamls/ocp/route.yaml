@@ -14,7 +14,7 @@ metadata:
     # traefik.ingress.kubernetes.io/router.middlewares: keycloak-traefik-forward-auth@kubernetescrd
 spec:
   tls:
-  - secretName: star-k3s-dedyn-io-tls
+    - secretName: star-k3s-dedyn-io-tls
       hosts:
         - k3s.dedyn.io
         - oauth.k3s.dedyn.io
