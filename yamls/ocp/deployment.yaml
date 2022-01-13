@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       containers:
-        - image: registry-service.private-registry.svc.cluster.local:5000/tekton-argocd/app:c84e03c
+        - image: registry.local:5000/tekton-argocd/app:c84e03c
           imagePullPolicy: Always
           name: ui
           ports:
